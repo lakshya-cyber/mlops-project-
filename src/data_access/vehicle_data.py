@@ -50,8 +50,7 @@ class Proj1Data:
 
             print(f"Data fetched with len: {len(df)}")
 
-            if "id" in df.columns:
-                df = df.drop(columns=["id"])
+            
 
             df.replace({"na": np.nan}, inplace=True)
 
