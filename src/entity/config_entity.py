@@ -118,3 +118,10 @@ class ModelPusherConfig:
         model_registry_dir,
         MODEL_FILE_NAME
     )
+
+@dataclass
+class VehiclePredictorConfig:
+    model_file_path: str = os.path.join(
+        "model_registry",
+        MODEL_FILE_NAME
+    )
