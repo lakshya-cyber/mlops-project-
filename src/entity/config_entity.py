@@ -95,7 +95,7 @@ class ModelTrainerConfig:
         MODEL_FILE_NAME
     )
 
-    expected_score: float = MODEL_TRAINER_EXPECTED_SCORE
+    expected_accuracy: float = MODEL_TRAINER_EXPECTED_SCORE
     model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
 
     _n_estimators = MODEL_TRAINER_N_ESTIMATORS
@@ -104,3 +104,17 @@ class ModelTrainerConfig:
     _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
     _criterion = MIN_SAMPLES_SPLIT_CRITERION
     _random_state = MIN_SAMPLES_SPLIT_RANDOM_STATE
+
+
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+  
+
+@dataclass
+class ModelPusherConfig:
+    model_registry_dir: str = os.path.join("model_registry")
+    model_file_path: str = os.path.join(
+        model_registry_dir,
+        MODEL_FILE_NAME
+    )

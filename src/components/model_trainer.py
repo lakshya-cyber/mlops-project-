@@ -10,7 +10,7 @@ from src.logger import logging
 from src.utils.main_utils import load_numpy_array_data, load_object, save_object
 from src.entity.config_entity import ModelTrainerConfig
 from src.entity.artifact_entity import DataTransformationArtifact, ModelTrainerArtifact, ClassificationMetricArtifact
-# from src.entity.estimator import MyModel
+from src.entity.estimator import MyModel
 
 class ModelTrainer:
     def __init__(self, data_transformation_artifact: DataTransformationArtifact,
